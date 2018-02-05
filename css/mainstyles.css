@@ -1,0 +1,685 @@
+/******** GLOBAL ********/
+html, body {
+    font: 20px raleway, sans-serif, Helvetica;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+h1,h2,h3,h4,h5,h6,p,ul {
+    margin: 0;
+    padding: 0;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.blinkingCursor {
+    font: 100 1.7rem Raleway Helvetica;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+.imgContainer {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100vw;
+    height: 60vh;
+}
+
+.redirectLinks {
+    position: relative;
+    transition: color ease 0.5s;
+    text-decoration: none;
+    color:#81b3d2;
+}
+.redirectLinks:hover {
+    color: #d73444;
+}
+.redirectLinks:hover:after {
+    width: 100%;
+}
+.redirectLinks:after {
+    content: "";
+    transition: all ease 0.5s;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    position:absolute;
+    bottom: -2px;
+    height: 2px;
+    width:0;
+    left: 0;
+    background:#d73444;
+}
+
+.dropDown {
+    min-width: 12em;
+    position: absolute;
+    display: inline-block;
+    margin: 0 1em;
+    min-height: 2em;
+    max-height: 2em;
+    overflow: hidden;
+    top: 0.7em;
+    left: 60px;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    color: #fff;
+    outline: none;
+    border: .06em solid transparent;
+    border-radius: 1em;
+    background-color: #333;
+    transition: 0.3s all ease-in-out;
+}
+.dropDown::after { /* Defines the down-ward facing triangle */
+    content:"";
+    position: absolute;
+    right: 0.8em;
+    top: 0.9em;
+    border: .3em solid #fff;
+    border-color: #fff transparent transparent transparent;
+    transition: .4s all ease-in-out;
+}
+.dropDown input {
+    display: none;
+}
+.dropDown label {
+    display:block;
+    border-top: .06em solid #d9d9d9;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 1em;
+    padding-right: 3em;
+    cursor: pointer;
+    position: relative;
+    
+}
+.dropDown label:nth-child(2) {
+      margin-top: 2em;
+      border-top: .06em solid #d9d9d9;
+    }
+.dropDown input:checked + label {
+    display:block;
+    border-top: none;
+    position: absolute;
+    top: 0;
+}
+.dropDown input:checked + label:nth-child(2) {
+    margin-top: 0;
+    position: relative;
+}
+.dropDown.expanded {
+    color: #000;
+    border: 0.06em solid #3694d7;
+    background: #fff;
+    border-radius: .25em;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 0px;
+    max-height: 15em;
+}
+.dropDown.expanded label {
+    border-top: .06em solid #d9d9d9;
+    transition: color .2s ease-in-out;
+}
+.dropDown.expanded label:hover {
+    color: #a4a4a4;
+    transition: color .2s ease-in-out;
+}
+.dropDown.expanded input:checked + label {
+    color: #a4a4a4;
+}
+.dropDown.expanded::after {
+    transform: rotate(-180deg);
+    top: .55em;
+    border-color: #000 transparent transparent transparent;
+}
+
+/******** MainPG Common Styles ********/
+.sectionImgHeading {
+    color: #fff;
+    font: normal 5rem 'Open Sans';
+    text-shadow: 3px 3px 3px #000;
+}
+.sectionImgDescription {
+    font: normal 2rem 'Open Sans';
+    text-shadow: 3px 3px 1px #000;
+}
+.sectionHeading {
+    font: normal 2.2rem raleway, Helvetica;
+    color: #fff;
+}
+.sectionDescription {
+    font: normal 1.1rem raleway, Helvetica;
+    color: #fff;
+    padding: 20px 0;
+    line-height: 1.5rem;
+}
+.sectionContainer {
+    width: 70vw;
+    margin: auto;
+    padding: 100px 0;
+}
+.projectLinks {
+    font-size: 1rem;
+}
+.projectTags {
+    padding-top: 5px;
+}
+.projectIcon {
+    width: 60px;
+    position: absolute;
+    left: -75px;
+}
+
+
+
+/**************************************************/
+/************** MAIN PAGE SECTIONS ****************/
+/**************************************************/
+
+/******** Header & Navbar ********/
+#mainpg-header,
+header {
+    width: 100%;
+    height: 45px;
+    border-bottom: #aaa solid 1px;
+    position: fixed;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+}
+#mainpg-header #leftContainer {
+    display: inline-block;
+    float: left;
+    height: 100%;
+}
+#mainpg-header #leftContainer ul,
+header ul {
+    display: inline-block;
+    list-style: none;
+    height: 100%;
+}
+#mainpg-header #leftContainer ul li {
+    float: left;
+    height: 100%;
+}
+#mainpg-header #leftContainer ul #resumeLi {
+    margin-left: 30px;
+}
+#mainpg-header #leftContainer ul li #linkToResume {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#mainpg-header #leftContainer h1 {
+    height: 100%;
+    margin: 0;
+    padding: 5px 0 0 10px;
+    font-size: 1.3rem;
+}
+#mainpg-header #leftContainer #linkToResume {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+    transition: color 0.5s ease;
+    z-index: 999;
+}
+#resumeLi:hover:after, #resumeLi:hover:before {
+    width: 100%;
+    height: 100%;
+}
+#resumeLi {
+    box-sizing: border-box;
+    margin-left: -2px;
+    position: relative;
+    overflow: hidden;
+    padding: 0 6px;
+}
+#resumeLi:before{
+    content: "";
+    box-sizing: border-box;
+    transition: 0.25s all ease;
+    -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background: #d73444;
+    left:0;
+    top: 0;
+}
+
+
+#mainpg-header nav {
+    height: 100%;
+    float: right;
+}
+#mainpg-header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+#mainpg-header nav ul li {
+    float: left;
+    height: 100%;
+    list-style: none;
+    display: inline;
+    padding: 0px 15px 0 15px;
+    transition: background-color 1000ms;
+}
+#mainpg-header nav ul li a {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+}
+#mainpg-header nav li:hover, #mainpg-header nav li.active {
+    background-color: #28224B;
+    transition: background-color 500ms;
+}
+
+
+
+/******** SF wallpaper, Main cover section ********/
+#mainpg-mainImg {
+    background-image: url('../img/baybackground.jpg');
+    background-position: top center;
+    height: 100vh;
+}
+#mainpg-mainImg .ptext {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    text-shadow: 2px 2px #000;
+}
+#mainpg-mainImg #mainpg-nameHeading {
+    font-family: 'Ubuntu';
+    font-style: italic;
+}
+#mainpg-typingLetters {
+    margin: 0;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 1.7rem;
+}
+#mainpg-typingLetters .typeWrite {
+    color: #fff;
+    font-family: 'Ubuntu';
+}
+
+
+/******** Bio section ********/
+#mainpg-bio {
+    margin-top: -45px;
+    padding-top: 45px;
+}
+#mainpg-bio #aboutMeContainer {
+    height: 100%;
+}
+#mainpg-bio #aboutMeTextContainer {
+    width: 70%;
+}
+#mainpg-bio #aboutMeTextContainer h3 {
+    color: #fff;
+    font: normal 1.4rem raleway, Helvetica;
+    padding: 15px 0 4px 0;
+}
+#mainpg-bio #aboutMeTextContainer ul {
+    padding: 0;
+}
+#mainpg-bio #aboutMeTextContainer li {
+    color: #fff;
+    padding: 2px 0;
+    margin-left: 20px;
+}
+#mainpg-bio #aboutMeTextContainer #listPro {
+    float: left;
+    width: 50%;
+}
+#mainpg-bio #aboutMeTextContainer #listOther {
+    float: right;
+    width: 50%;
+    left: 2vw;
+}
+
+#mainpg-bio #aboutMeImgContainer {
+    width: 25%;
+    float: right;
+}
+#mainpg-bio #aboutMeImgContainer img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/******** Work section ********/
+#mainpg-work {
+    margin: -45px 0 0 0;
+    padding: 45px 0 0 0;
+    color: #fff;
+}
+#mainpg-work > .sectionContainer {
+    position: relative;
+}
+#mainpg-work .imgContainer {
+    background-image: url(../img/projects.jpg);
+}
+#mainpg-work .ptext {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#mainpg-work #projDropDownContainer {
+    display: inline-block;
+    width: 17em;
+    position: absolute;
+    right: -10px;
+    top: 40px;
+}
+#mainpg-work #projDropDownContainer span {
+    margin-left: 25px;
+}
+#mainpg-work #projDropDownText {
+    display: inline-block;
+}
+
+
+/******** Contact section ********/
+#mainpg-contact {
+    margin-top: -45px;
+    padding-top: 45px;
+    color: #fff;
+}
+#mainpg-contact .imgContainer {
+    background-image: url(../img/contact.jpg);
+}
+#mainpg-contact .ptext {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#mainpg-contact .sectionContainer a > img {
+    width: 20px;
+    position: relative;
+    top: 3px;
+}
+#resume {
+    display: inline-block;
+    backface-visibility: hidden;
+    filter: blur(0);
+}
+
+
+/********* Media Queries *********/
+@media screen and (max-width: 1150px) {
+    #mainpg-mainImg {
+        background-attachment: scroll;
+        position: relative;
+    }
+    #mainpg-mainImg .ptext {
+        top: auto;
+        left: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+        width: 100%;
+        text-align: center;
+    }
+    #aboutMeImgContainer {
+        position: relative;
+        top: 50px;
+    }
+    #mainpg-work #projDropDownContainer span {
+        margin-left: 25px;
+    }
+}
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 18px;
+    }
+    #mainpg-bio {
+        padding-top: 0;
+    }
+    .imgContainer {
+        background-attachment: scroll;
+    }
+    .sectionContainer {
+        width: 80vw;
+        margin: auto;
+        padding: 100px 0;
+    }
+    .sectionImgDescription {
+        font-size: 1.7rem;
+    }
+    .projectIcon {
+        display: none;
+    }
+    #mainpg-work #projDropDownContainer {
+        top: 20px;
+        left: 0;
+    }
+    #projectsPtext {
+        text-align: right;
+    }
+    
+}
+@media screen and (max-width: 650px) {
+    html {
+        font-size: 16px;
+    }
+    #cyz {
+        display: none;
+    }
+    .sectionContainer {
+        width: 90vw;
+        padding: 100px 0;
+    }
+    #mainpg-bio #aboutMeImgContainer {
+        top: -10px;
+        float: none;
+        width: 30%;
+        margin: 0 auto;
+    }
+    #mainpg-bio #aboutMeTextContainer {
+        text-align: center;
+        float: none;
+        width: 100%;
+    }
+    #mainpg-bio #aboutMeTextContainer #listPro,
+    #mainpg-bio #aboutMeTextContainer #listOther{
+        text-align: left;
+    }
+    #mainpg-bio #listsContainer {
+        position: relative;
+        left: 10%;
+    }
+    .dropDown {
+        min-width: 10em;
+        min-height: 1.8em;
+        max-height: 1.8em;
+        top: 0.6em;
+    }
+    .dropDown::after {
+        right: 0.8em;
+        top: 0.75em;
+    }
+    .dropDown label {
+        font-size: 1.1rem;
+        height: 2.1em;
+    }
+    #projectsPtext {
+        left: 40%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    html {
+        font-size: 15px;
+    }
+    .sectionImgDescription {
+        display: none;
+    }
+    .sectionImgHeading {
+        font-size: 4rem;
+    }
+    #mainpg-nameHeading {
+        font-size: 4rem;
+    }
+    .dropDown {
+        min-width: 10em;
+        margin: 0 1em;
+        min-height: 1.6em;
+        max-height: 1.6em;
+        top: 0.6em;
+    }
+    .dropDown::after {
+        right: 0.8em;
+        top: 0.7em;
+    }
+    .dropDown label {
+        font-size: 1.1rem;
+        height: 2.3em;
+    }
+}
+@media screen and (max-width: 475px) {
+    html {
+        font-size: 15px;
+    }
+    #mainpg-mainImg .ptext {
+        margin-top: 80px;
+    }
+    .sectionImgHeading {
+        font-size: 10vw;
+    }
+    #mainpg-header #leftContainer {
+        display: none;
+    }
+    #mainpg-header nav {
+        float: none;
+        text-align: center;
+    }
+    #mainpg-header nav ul {
+        display: inline-block;
+    }
+    
+}
+
+
+/******** Animations, Keyframes *********/
+@keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-o-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.1, 1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.1, 1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+	0% { opacity: 1; visibility: visible; } 
+	100% { opacity: 0; visibility: hidden; }
+}
+@keyframes fadeout {
+	0% { opacity: 1; visibility: visible; } 
+	100% { opacity: 0; visibility: hidden; } 
+}
+@-webkit-keyframes fadein {
+	0% { opacity: 0; visibility: hidden; } 
+	100% { opacity: 1; visibility: visible; }
+}
+@keyframes fadein {
+	0% { opacity: 0; visibility: hidden; } 
+	100% { opacity: 1; visibility: visible; } 
+}
+
+
+
+
+

@@ -1,0 +1,78 @@
+
+/********* Common Project Page Elements ************/
+
+html {
+    font: 22px raleway Helvetica;
+}
+/* Header */
+.projpg-header {
+    position: relative;
+}
+.projpg-header .homeLinkContainer {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    transition: background-color 500ms;
+}
+.projpg-header .homeLinkContainer:hover {
+    background-color: #28224B;
+    transition: background-color 500ms;
+}
+.projpg-header .homeLinkContainer .arrowToMain {
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+}
+.projpg-header .homeLinkContainer .linkToMain {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px 0 20px;
+}
+.projpg-header .projTitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cyz {
+    font-size: 1.5rem;
+    float: left;
+    height: 100%;
+    padding: 0 15px;
+}
+
+/* Content */
+.projpg-sectionContainer {
+    width: 70vw;
+    margin: 60px auto;
+}
+.projpg-sectionContainer h1 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 6px 0;
+}
+.projpg-sectionContainer h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 6px 0;
+}
+.projpg-sectionContainer p {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 6px 0;
+}
+
+/********* Registration Page ************/
+
+/* Header */
+#reg-projTitle {
+    font-size: 1.7rem;
+}
