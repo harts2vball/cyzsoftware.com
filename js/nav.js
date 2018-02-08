@@ -16,11 +16,11 @@ var navData = {
     }
 };
 var linkData = {
-    ids: ['linkToTop','linkToBio','linkToWork','linkToContact','linkToResume'],
+    ids: ['linkToTop','linkToBio','linkToWork','linkToContact','resumeLi'],
     objs: [],
     loadData: function() {
         for(var i = 0; i < this.ids.length; i++) {
-            this.objs.push(document.querySelector('#'+this.ids[i]));
+            this.objs.push(document.getElementById(this.ids[i]));
         }
     }
 };
@@ -133,14 +133,14 @@ var updateSection = function() {
         if(i < navData.numNavLinks - 1 && 
            position >= navData.sectionYPositions[i] && 
            position < navData.sectionYPositions[i+1]) {
-            linkData.objs[i].parentElement.className = "active";
+            linkData.objs[i].className = "active";
         } 
         else if( i === navData.numNavLinks - 1 &&
                    position >= navData.sectionYPositions[i]) {
-            linkData.objs[i].parentElement.className = "active";
+            linkData.objs[i].className = "active";
         } 
         else {
-            linkData.objs[i].parentElement.className = "";
+            linkData.objs[i].className = "";
         }
     }
 };
@@ -158,7 +158,8 @@ var linkClick = function(e) {
 
     // Call our smooth scroll function (foreach can't break so use for)
     for(var i = 0; i < navData.sections.length; i++) {
-        if(e.target === linkData.objs[i]) {
+        if(e.target === linkData.objs[i] || 
+           e.target.parentElement === linkData.objs[i]) {
             smoothScrollTo(navData.objs[i]);
             if(i === 4) {
                 pulsate(navData.objs[4],true);
@@ -259,7 +260,6 @@ var expandDropdown = function(e) {
 
 /* Return dropdowns to initial state */
 var unexpandDropdown = function() {
-    console.log('unexpanded');
     dropDownData.objs.forEach(function(elem) {
        elem.classList.remove('expanded'); 
     });

@@ -1,12 +1,9 @@
 
 /********* Common Project Page Elements ************/
 
-html {
-    font: 22px raleway Helvetica;
-}
 /* Header */
 .projpg-header {
-    position: relative;
+    position: fixed;
 }
 .projpg-header .homeLinkContainer {
     position: relative;
@@ -52,22 +49,22 @@ html {
 /* Content */
 .projpg-sectionContainer {
     width: 70vw;
-    margin: 60px auto;
+    margin: 50px auto;
 }
 .projpg-sectionContainer h1 {
     color: #fff;
     font-size: 2rem;
-    padding: 6px 0;
+    margin-top: 15px;
 }
 .projpg-sectionContainer h2 {
     color: #fff;
     font-size: 1.5rem;
-    padding: 6px 0;
+    margin-top: 8px;
 }
 .projpg-sectionContainer p {
     color: #fff;
     font-size: 1.1rem;
-    padding: 6px 0;
+    margin-top: 8px;
 }
 
 /********* Registration Page ************/
@@ -76,3 +73,62 @@ html {
 #reg-projTitle {
     font-size: 1.7rem;
 }
+
+/* Content */
+#projNote {
+    font-size: 1rem;
+    margin: 0;
+}
+#paperLinksContainer {
+    display: inline-block;
+    border: #fff solid 1px;
+    padding: 5px;
+}
+img[alt="Training example"] {
+    display: block;
+    margin: 8px 30px 20px 0;
+    max-width: 15%;
+    border: #fff solid 2px;
+    float: left;
+}
+img[alt="Training example2"] {
+    display: block;
+    float: right;
+    max-width: 40%;
+    margin: 20px 0 20px 30px;
+}
+img[alt="Final architecture"],
+img[alt="Boundary refinement"],
+img[alt="Results"] {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+}
+
+
+/********* Media Queries ************/
+@media screen and (max-width: 1100px) {
+    #projReg-header .cyz,
+    #projReg-header .projTitle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    img[alt="Training example"] {
+        display: block;
+        margin: 8px 30px 20px 0;
+        max-width: 50%;
+        border: #fff solid 2px;
+        float: left;
+    }
+    img[alt="Training example2"] {
+        display: block;
+        float: right;
+        max-width: 100%;
+        margin: 20px 0;
+    }
+}
+
+
+

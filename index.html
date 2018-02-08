@@ -22,10 +22,10 @@
             
             <nav>
                 <ul>
-                    <li class="active"><a id="linkToTop" href="#">TOP</a></li>
-                    <li><a id="linkToBio" href="#">BIO</a></li>
-                    <li><a id="linkToWork" href="#">WORK</a></li>
-                    <li><a id="linkToContact" href="#">CONTACT</a></li>
+                    <li id="linkToTop" class="active"><a href="#">TOP</a></li>
+                    <li id="linkToBio"><a href="#">BIO</a></li>
+                    <li id="linkToWork"><a href="#">WORK</a></li>
+                    <li id="linkToContact"><a href="#">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
@@ -60,7 +60,7 @@
                                     <li>Java Applications</li>
                                     <li>Deep Learning</li>
                                     <li>Computer Vision</li>
-                                    <li>Teaching To Learn</li>
+                                    <li>Teaching/Tutoring</li>
                                 </ul>
                             </div>
                             <div class="container" id="listOther">
@@ -101,18 +101,18 @@
                     <img src="img/latex_icon.png" alt="Latex Icon" class="projectIcon"><h3 class="sectionSubHeading projectTitle">Handwriting To Latex Converter</h3>
                     <p class="projectTags">Tags: Machine Learning, Computer Vision, Mobile Application</p>
                     <p class="sectionDescription">
-                        The goal is to build an application that converts handwritten mathematical equations and scientific symbols into a much neater latex representation. However, unlike other available converters, my application will allow you to make changes to the latex image either by adding more handwritten characters directly to the latex image or to remove certain parts of the equation by scribbling it out on the latex image. Eventually, I believe this will be invalubale in note-taking applications, especially for STEM students.
+                        The goal is to build an application that converts handwritten mathematical equations and scientific symbols into a much neater latex representation. However, unlike other available converters, my application will allow you to make changes to the latex image either by adding more handwritten characters directly to the latex image or by scribbling out certain parts of the image to remove equation components. It will also have a selection feature to easily move equation components around using drag and drop. I believe this will be an invalubale tool in note-taking applications, especially for STEM students.
                     </p>
                 </div>
                 <h2 class="sectionHeading projectSectionHeading">Past Projects</h2>
                 <div class="container" id="ppContainer">
                     <hr>
                     <div class="container" id="pp_website" data-date="20174" data-pride="4" data-difficulty="8">
-                        <img src="img/website_icon.png" alt="Web Icon" class="projectIcon"><h3 class="sectionSubHeading">Personal Website - <a href="#" target="#" class="projectLinks redirectLinks">[code]</a></h3>
+                        <img src="img/website_icon.png" alt="Web Icon" class="projectIcon"><h3 class="sectionSubHeading">Personal Website - <a href="https://github.com/harts2vball/cyzsoftware.com" target="#" class="projectLinks redirectLinks">[code]</a></h3>
                         <p class="projectTags">Winter 2017-2018</p>
                         <p class="projectTags">Tags: Web Development, HTML5, CSS3, Vanilla Javascript</p>
                         <p class="sectionDescription">
-                            Using only vanilla JS, HTML, and CSS (without libraries), I wanted to  finally learn about the core architecture and inner-workings of web technologies to make my portfolio and use it for future projects.
+                            Using only vanilla JS, HTML, and CSS (without libraries), I wanted to  finally learn about the core architecture and inner-workings of web technologies to build my personal site and also use these skills for future web projects.
                         </p>
                     </div>
                     <hr>
@@ -121,16 +121,16 @@
                         <p class="projectTags">Fall 2017</p>
                         <p class="projectTags">Tags: Machine Learning, Data Science, Web Mining</p>
                         <p class="sectionDescription">
-                            This project earned the award for best final projects in my web mining and recommender systems class. From a Kaggle dataset that contains data on over 50,000 diamonds and their various properties, we used data analytics, neural networks, and various optimizations to obtain state-of-the-art price predictions (99.24 R2 score).
+                            This project earned the award for best final projects in my web mining and recommender systems class. From a Kaggle dataset that contains data on over 50,000 diamonds and their various properties, we used data analytics, neural networks, fine-tuning, and various optimizations to obtain state-of-the-art price predictions (99.24 R2 score). You can read more about this project in the link to the final report above.
                         </p>
                     </div>
                     <hr>
                     <div class="container" id="pp_registration" data-date="20172" data-pride="1" data-difficulty="1">
                         <img src="img/nn_icon.png" alt="NN Icon" class="projectIcon"><h3 class="sectionSubHeading">Biomedical Image Registration and Segmentation - <a href="pages/proj_reg.html" target="#" class="projectLinks redirectLinks">[more info]</a></h3>
                         <p class="projectTags">Summer 2017</p>
-                        <p class="projectTags">Tags: Deep Learning Research, Computer Vision, Fully Convolutional Networks</p>
+                        <p class="projectTags">Tags: Deep Learning Research, Computer Vision, Convolutional Neural Networks, Boundary Refinement</p>
                         <p class="sectionDescription">
-                            In this research project, I worked with Professor Danny Chen at the University of Notre Dame on cutting edge methods to improve semantic image segmentation via convolutional networks on a dataset of wing-pouch frames provided by the biology department. I was able to develop a new segmentation architecture that significantly improved accuracy over the previous state-of-the-art.
+                            In this research project, I worked with Professor Danny Chen at the University of Notre Dame on cutting edge methods to improve semantic image segmentation (i.e. identifying which pixels belong to which object in an image) via convolutional networks on a dataset of wing-pouch frames provided by a research group in the biology department. I was able to develop a new segmentation architecture while using boundary refinement post-processing to achieve significant improvements over the previous state-of-the-art. If you want more details, check out the more-info link above.
                         </p>
                     </div>
                     <hr>
@@ -139,7 +139,7 @@
                         <p class="projectTags">Winter 2016-2017</p>
                         <p class="projectTags">Tags: Java Virtual Machine, Java Garbage Collector, Data Analytics</p>
                         <p class="sectionDescription">
-                            During my software internship at Huawei Technologies, I made an application that used JVM garbage collection data to predict memory leak instances in a testing system's environment. My program used patterns in execution data to make accurate predictions and was later integrated into a system-wide diagnostic program to detect abnormal memory events.
+                            During my software internship at Huawei Technologies, I made an application that used JVM garbage collection data to predict memory leak instances in a testing system's environment. My program used patterns in execution data to make accurate predictions and identify probable memory leak slots. This feature was later integrated into a system-wide diagnostic program to detect abnormal memory events.
                         </p>
                     </div>
                     <hr>
@@ -148,7 +148,7 @@
                         <p class="projectTags">Fall 2016</p>
                         <p class="projectTags">Tags: Java, Android Mobile Application</p>
                         <p class="sectionDescription">
-                            I worked with a team of 6 to develop a platform that connects developers with clients who seek programmers to implement their ideas. This allows developers to effectively search for relevant projects, apply for and contribute to them, and effectively communicate with clients.
+                            I worked in a team of 6 to build a platform that connects developers who are looking for work with clients who are seeking programmers to implement their ideas. Our app allows developers to quickly search for relevant projects, apply for and contribute to them, and effectively communicate with clients.
                         </p>
                     </div>
                     <hr>
@@ -157,7 +157,7 @@
                         <p class="projectTags">Summer 2016</p>
                         <p class="projectTags">Tags: Swift, iOS Mobile Application</p>
                         <p class="sectionDescription">
-                            In this personal project, I created a mobile marketplace for users to buy/sell items. The distinguished feature of my app: it would alert users of relevant (or wish-list category) items that are posted and allow sellers to expedite the selling process with smart searches based off of consumer interest and action history.
+                            In this personal project, I created a mobile marketplace for users to buy/sell items. The distinguished feature of my app: it would alert users of relevant (or wish-list category) items that are posted and allow sellers to expedite the selling process with smart searches based off of consumer interest and action history. No popular open marketplaces for college students to buy and sell a wide range of items had this functionality.
                         </p>
                     </div>
                     <hr>
@@ -166,7 +166,7 @@
                         <p class="projectTags">Spring 2016</p>
                         <p class="projectTags">Tags: Embedded Systems, C</p>
                         <p class="sectionDescription">
-                            I designed a new architecture to hold maze data that allowed for faster maze traversal and better navigation. From this new system, I was able to implement improved algorithms that cut the traversal time of our mouse in zig-zagging sections of the maze by over 30% which led to significant improvements in overall performance.
+                            While working with the UCSD Micromouse team, I designed a new architecture to hold maze data that allowed for faster maze traversal and better navigation. From this new system, I was able to implement improved algorithms that cut the traversal time of our mouse in zig-zagging sections of the maze by over 30% which led to significant improvements in overall performance.
                         </p>
                     </div>
                     <hr>
@@ -175,16 +175,16 @@
                         <p class="projectTags">Summer 2014</p>
                         <p class="projectTags">Tags: Java, Hardware-Testing</p>
                         <p class="sectionDescription">
-                            This was my first big software project in industry and was completed during my first internship at Huawei Technologies. I wrote a Java program that took in large CPU dump files, analyzed the data of individual threads, and outputted the predicted list of threads that would use the most CPU resources.
+                            This was my first big software project in industry and was completed during my first internship at Huawei Technologies. I wrote a Java program that took in large CPU dump files, analyzed the thread data, and outputted the predicted list of threads that would use the most CPU resources. This program was part of a larger application that focused on automated troubleshooting.
                         </p>
                     </div>
                     <hr>
                     <div class="container" id="pp_ochem" data-date="20131" data-pride="3" data-difficulty="2">
-                        <img src="img/ochem_icon.png" alt="OChem Icon" class="projectIcon"><h3 class="sectionSubHeading">Improved Synthesis of Anti-Cancer Drug YD-3 - <a href="project/ochem.html" target="#" class="projectLinks redirectLinks">[more info]</a></h3>
+                        <img src="img/ochem_icon.png" alt="OChem Icon" class="projectIcon"><h3 class="sectionSubHeading">Improved Synthesis of Anti-Cancer Drug YD-3 - <a href="files/Intel_STS_Submission.pdf" class="redirectLinks" target="#">[Intel STS Paper]</a>&nbsp; <a href="files/Chemical_Science_Paper.pdf" class="redirectLinks" target="#">[Chemical Science Submission]</a></h3>
                         <p class="projectTags">2013</p>
                         <p class="projectTags">Tags: Organic Chemistry Research</p>
                         <p class="sectionDescription">
-                            Under the guidance of postdoc Dr. Mengchun Ye at the Scripps Research Institute, I designed an innovative method that drastically improved the synthesis of an anticancer drug, YD-3. I then authored a paper detailing this method (which achieved 96.6% final yield) and won the Intel Science Talent Search semifinalist and Siemens Competition in Math, Science, and Technology semifinalist awards.
+                            Under the guidance of postdoc Dr. Mengchun Ye at the Scripps Research Institute, I designed an innovative method that drastically improved the synthesis of an anticancer drug, YD-3, using novel arylation techiques. From my method (which achieved 96.6% final yield), I authored a paper that later won the Intel Science Talent Search semifinalist and Siemens Competition in Math, Science, and Technology semifinalist awards (see the Intel STS Paper link). My work also benefited a larger project about similar processes and was included in a paper that was later published in the prestigious Chemical Science journal (see the Chemical Science Submission link).
                         </p>
                     </div>
                 </div>
