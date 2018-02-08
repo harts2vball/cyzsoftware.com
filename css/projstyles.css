@@ -116,18 +116,13 @@ img[alt="Results"] {
 
 @media screen and (max-width: 800px) {
     img[alt="Training example"] {
-        display: block;
-        margin: 8px 30px 20px 0;
         max-width: 50%;
-        border: #fff solid 2px;
-        float: left;
     }
     img[alt="Training example2"] {
-        display: block;
-        float: right;
         max-width: 100%;
         margin: 20px 0;
     }
+    
 }
 
 
