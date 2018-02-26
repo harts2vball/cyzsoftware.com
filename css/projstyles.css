@@ -3,7 +3,9 @@
 
 /* Header */
 .projpg-header {
+    width: 100%;
     position: fixed;
+    top: 0;
 }
 .projpg-header .homeLinkContainer {
     position: relative;
@@ -37,9 +39,13 @@
 .projpg-header .projTitle {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
 .cyz {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 1.5rem;
     float: left;
     height: 100%;
@@ -47,6 +53,10 @@
 }
 
 /* Content */
+.projpg-section {
+    padding-top: 35px;
+
+}
 .projpg-sectionContainer {
     width: 70vw;
     margin: 50px auto;
@@ -71,7 +81,7 @@
 
 /* Header */
 #reg-projTitle {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 /* Content */

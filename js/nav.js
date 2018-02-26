@@ -105,6 +105,7 @@ window.onload = function() {
 var pulsate = function(elem,start) {
     if(start) {
         elem.style.animation = "pulsate infinite 1s";
+        elem.style.webkitAnimation = "pulsate infinite 1s";
         
         setTimeout(function() {
             pulsate(elem,false); }, 3000);
@@ -215,7 +216,7 @@ var smoothScrollTo = function(elem) {
     var previousY = startY;
     var scrollTick = function() {
         // Check for interruptions in between scroll animations
-        if (getCurrentY() != previousY) {
+        if(getCurrentY() != previousY) {
             console.log("Smooth scroll interrupted.");
             return;
         }
@@ -223,8 +224,13 @@ var smoothScrollTo = function(elem) {
         var now = Date.now(),
             point = smoothStep(startTime,endTime,now),
             nextY = Math.round(startY + offset*point);
-        document.scrollingElement.scrollTop = nextY;
 
+        var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+        if(isFirefox) {
+            document.firstElementChild.scrollTop = nextY;
+        } else {
+            document.scrollingElement.scrollTop = nextY;
+        }
         
         if(now >= endTime) {
             return;
